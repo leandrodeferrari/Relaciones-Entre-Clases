@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="" visibility="private" xPosition="576.0" yPosition="121.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPerro" returnType="Perro" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="76.0" yPosition="133.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="documentoDeIdentidad" type="long" visibility="private"/>
+        <Field name="perro" type="Perro" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="adoptarPerro" returnType="Perro" visibility="public"/>
+        <Method name="mostrarDatosDeLaPersona" returnType="void" visibility="public">
+          <Argument type="Persona" name="personaUsuario"/>
+        </Method>
+        <Method name="crearPersona" returnType="Persona" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene un" source="Persona" target="Perro" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
