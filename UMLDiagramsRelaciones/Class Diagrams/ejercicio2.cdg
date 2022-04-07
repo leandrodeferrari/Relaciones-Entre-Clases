@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio2">
+  <ClassDiagramComponents>
+    <Class name="RevolverDeAgua" package="" visibility="public" xPosition="1.0" yPosition="103.0">
+      <Fields>
+        <Field name="posicionActual" type="int" visibility="private"/>
+        <Field name="posicionAgua" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarRevolver" returnType="RevolverDeAgua" visibility="public"/>
+        <Method name="mojar" returnType="boolean" visibility="public">
+          <Argument type="RevolverDeAgua" name="revolver"/>
+        </Method>
+        <Method name="siguienteChorro" returnType="void" visibility="public">
+          <Argument type="RevolverDeAgua" name="revolver"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Jugador" package="" visibility="public" xPosition="420.0" yPosition="90.0">
+      <Fields>
+        <Field name="idJugador" type="int" visibility="private"/>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="mojado" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="disparo" returnType="boolean" visibility="public">
+          <Argument type="RevolverDeAgua" name="revolver"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Juego" package="" visibility="public" xPosition="205.0" yPosition="270.0">
+      <Fields>
+        <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
+        <Field name="revolver" type="RevolverDeAgua" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="llenarJuego" returnType="Juego" visibility="public">
+          <Argument type="ArrayList&lt;Jugador&gt;" name="jugadores"/>
+        </Method>
+        <Method name="ronda" returnType="void" visibility="public">
+          <Argument type="RevolverDeAgua" name="revolver"/>
+          <Argument type="Jugador" name="jugadores"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

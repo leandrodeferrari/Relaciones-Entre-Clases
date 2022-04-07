@@ -14,7 +14,7 @@
         <Method name="crearPerro" returnType="Perro" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Persona" package="" visibility="public" xPosition="76.0" yPosition="133.0">
+    <Class name="Persona" package="" visibility="public" xPosition="88.0" yPosition="154.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="apellido" type="String" visibility="private"/>
