@@ -2,7 +2,7 @@
 
 <ClassDiagram name="ejercicio2">
   <ClassDiagramComponents>
-    <Class name="RevolverDeAgua" package="" visibility="public" xPosition="1.0" yPosition="103.0">
+    <Class name="RevolverDeAgua" package="" visibility="public" xPosition="69.0" yPosition="90.0">
       <Fields>
         <Field name="posicionActual" type="int" visibility="private"/>
         <Field name="posicionAgua" type="int" visibility="private"/>
@@ -19,7 +19,7 @@
         <Method name="toString" returnType="String" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Jugador" package="" visibility="public" xPosition="420.0" yPosition="90.0">
+    <Class name="Jugador" package="" visibility="public" xPosition="430.0" yPosition="90.0">
       <Fields>
         <Field name="idJugador" type="int" visibility="private"/>
         <Field name="nombre" type="String" visibility="private"/>
@@ -32,7 +32,7 @@
         </Method>
       </Methods>
     </Class>
-    <Class name="Juego" package="" visibility="public" xPosition="205.0" yPosition="270.0">
+    <Class name="Juego" package="" visibility="public" xPosition="233.0" yPosition="369.0">
       <Fields>
         <Field name="jugadores" type="ArrayList&lt;Jugador&gt;" visibility="private"/>
         <Field name="revolver" type="RevolverDeAgua" visibility="private"/>
@@ -49,5 +49,8 @@
       </Methods>
     </Class>
   </ClassDiagramComponents>
-  <ClassDiagramRelations/>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene un" source="Juego" target="RevolverDeAgua" type="Composition" sourceCardinality="0..1" targetCardinality="0..1"/>
+    <HasRelation name="Tiene un" source="Juego" target="Jugador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
 </ClassDiagram>

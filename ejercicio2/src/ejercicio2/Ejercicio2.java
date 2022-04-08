@@ -1,4 +1,5 @@
 
+
 package ejercicio2;
 
 public class Ejercicio2 {
@@ -47,7 +48,6 @@ public class Ejercicio2 {
         // sino se moja, se pasa al siguiente jugador hasta que uno se moje. Si o si alguien e tiene que mojar.
         // Al final del juego, se debe mostrar que jugador se mojó. Pensar la lógica necesaria para realizar
         // esto, usando los atributos de la clase Juego.
-        
         
         
         
