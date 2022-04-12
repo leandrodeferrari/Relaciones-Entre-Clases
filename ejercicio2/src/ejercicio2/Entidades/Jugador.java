@@ -4,7 +4,7 @@ package ejercicio2.Entidades;
 
 public class Jugador {
 
-    private int idJugador;
+    private int idJugador = 0;
     private String nombre;
     private boolean estaMojado;
 
