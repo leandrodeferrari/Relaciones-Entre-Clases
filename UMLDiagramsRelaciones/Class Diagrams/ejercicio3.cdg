@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio3">
+  <ClassDiagramComponents>
+    <Class name="Carta" package="" visibility="public" xPosition="105.0" yPosition="101.0">
+      <Fields>
+        <Field name="numeroDeCarta" type="Integer" visibility="private"/>
+        <Field name="paloDeCarta" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="mostrarCarta" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Mazo" package="" visibility="public" xPosition="430.0" yPosition="101.0">
+      <Fields>
+        <Field name="barajaDeCartas" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="barajar" returnType="Mazo" visibility="public"/>
+        <Method name="siguienteCarta" returnType="Mazo" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
+        <Method name="cartasDisponibles" returnType="Mazo" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
+        <Method name="darCartas" returnType="Mazo" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
+        <Method name="cartasMonton" returnType="Mazo" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
+        <Method name="mostrarBaraja" returnType="Mazo" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="NumerosDeCartas" package="" visibility="public" xPosition="156.0" yPosition="310.0">
+      <Literals>
+        <Literal name="1"/>
+        <Literal name="2"/>
+        <Literal name="3"/>
+        <Literal name="4"/>
+        <Literal name="5"/>
+        <Literal name="6"/>
+        <Literal name="7"/>
+        <Literal name="10"/>
+        <Literal name="11"/>
+        <Literal name="12"/>
+      </Literals>
+    </Enum>
+    <Enum name="PalosDeCartas" package="" visibility="public" xPosition="472.0" yPosition="348.0">
+      <Literals>
+        <Literal name="ESPADA"/>
+        <Literal name="BASTO"/>
+        <Literal name="COPA"/>
+        <Literal name="ORO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Mazo" target="Carta" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
