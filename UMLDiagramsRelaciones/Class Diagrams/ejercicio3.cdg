@@ -4,21 +4,21 @@
   <ClassDiagramComponents>
     <Class name="Carta" package="" visibility="public" xPosition="105.0" yPosition="101.0">
       <Fields>
-        <Field name="numeroDeCarta" type="Integer" visibility="private"/>
-        <Field name="paloDeCarta" type="String" visibility="private"/>
+        <Field name="numeroDeCarta" type="NumeroDeCarta" visibility="private"/>
+        <Field name="paloDeCarta" type="PaloDeCarta" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="mostrarCarta" returnType="void" visibility="public"/>
+        <Method name="crearCarta" returnType="Carta" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Mazo" package="" visibility="public" xPosition="430.0" yPosition="101.0">
+    <Class name="Mazo" package="" visibility="public" xPosition="424.0" yPosition="75.0">
       <Fields>
-        <Field name="barajaDeCartas" type="ArrayList&lt;Carta&gt;" visibility="private"/>
+        <Field name="barajaDeCartas" type="HashSet&lt;Carta&gt;" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="barajar" returnType="Mazo" visibility="public"/>
+        <Method name="crearMazo" returnType="Mazo" visibility="public"/>
         <Method name="siguienteCarta" returnType="Mazo" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
@@ -34,28 +34,29 @@
         <Method name="mostrarBaraja" returnType="Mazo" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
+        <Method name="barajar" returnType="Mazo" visibility="public"/>
       </Methods>
     </Class>
-    <Enum name="NumerosDeCartas" package="" visibility="public" xPosition="156.0" yPosition="310.0">
+    <Enum name="NumeroDeCarta" package="" visibility="public" xPosition="156.0" yPosition="310.0">
       <Literals>
-        <Literal name="1"/>
-        <Literal name="2"/>
-        <Literal name="3"/>
-        <Literal name="4"/>
-        <Literal name="5"/>
-        <Literal name="6"/>
-        <Literal name="7"/>
-        <Literal name="10"/>
-        <Literal name="11"/>
-        <Literal name="12"/>
+        <Literal name="UNO(1)"/>
+        <Literal name="DOS(2)"/>
+        <Literal name="TRES(3)"/>
+        <Literal name="CUATRO(4)"/>
+        <Literal name="CINCO(5)"/>
+        <Literal name="SEIS(6)"/>
+        <Literal name="SIETE(7)"/>
+        <Literal name="DIEZ(10)"/>
+        <Literal name="ONCE(11)"/>
+        <Literal name="DOCE(12)"/>
       </Literals>
     </Enum>
-    <Enum name="PalosDeCartas" package="" visibility="public" xPosition="472.0" yPosition="348.0">
+    <Enum name="PaloCarta" package="" visibility="public" xPosition="462.0" yPosition="347.0">
       <Literals>
-        <Literal name="ESPADA"/>
-        <Literal name="BASTO"/>
-        <Literal name="COPA"/>
-        <Literal name="ORO"/>
+        <Literal name="ESPADA(&quot;espada&quot;)"/>
+        <Literal name="BASTO(&quot;basto&quot;)"/>
+        <Literal name="ORO(&quot;oro&quot;)"/>
+        <Literal name="COPA(&quot;copa&quot;)"/>
       </Literals>
     </Enum>
   </ClassDiagramComponents>

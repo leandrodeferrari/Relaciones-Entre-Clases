@@ -1,6 +1,7 @@
 
 package ejercicio3;
 
+
 public class Ejercicio3 {
 
     public static void main(String[] args) {
@@ -24,14 +25,7 @@ public class Ejercicio3 {
         // si no ha salido ninguna indicárselo al usuario.
         // f) mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, 
         // si se saca una carta y luego se llama al método, este no mostrara esa primera carta.
-        
-        
-        
-        
-        
-        
-        
-        
+            
     }  
 
 }
