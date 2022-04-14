@@ -4,40 +4,41 @@
   <ClassDiagramComponents>
     <Class name="Carta" package="" visibility="public" xPosition="105.0" yPosition="101.0">
       <Fields>
-        <Field name="numeroDeCarta" type="NumeroDeCarta" visibility="private"/>
-        <Field name="paloDeCarta" type="PaloDeCarta" visibility="private"/>
+        <Field name="numeroDeCarta" type="Integer" visibility="private"/>
+        <Field name="paloDeCarta" type="String" visibility="private"/>
       </Fields>
       <Constructors/>
-      <Methods>
-        <Method name="crearCarta" returnType="Carta" visibility="public"/>
-      </Methods>
+      <Methods/>
     </Class>
-    <Class name="Mazo" package="" visibility="public" xPosition="424.0" yPosition="75.0">
+    <Class name="Mazo" package="" visibility="public" xPosition="429.0" yPosition="57.0">
       <Fields>
         <Field name="barajaDeCartas" type="HashSet&lt;Carta&gt;" visibility="private"/>
+        <Field name="cartasDelMonton" type="HashSet&lt;Carta&gt;" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="crearMazo" returnType="Mazo" visibility="public"/>
-        <Method name="siguienteCarta" returnType="Mazo" visibility="public">
+        <Method name="llenarBaraja" returnType="Mazo" visibility="public"/>
+        <Method name="barajar" returnType="Mazo" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
-        <Method name="cartasDisponibles" returnType="Mazo" visibility="public">
+        <Method name="siguienteCarta" returnType="Carta" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
-        <Method name="darCartas" returnType="Mazo" visibility="public">
+        <Method name="cartasDisponibles" returnType="int" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
-        <Method name="cartasMonton" returnType="Mazo" visibility="public">
+        <Method name="darCartas" returnType="HashSet&lt;Carta&gt;" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
-        <Method name="mostrarBaraja" returnType="Mazo" visibility="public">
+        <Method name="mostrarCartasDelMonton" returnType="void" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
-        <Method name="barajar" returnType="Mazo" visibility="public"/>
+        <Method name="mostrarBaraja" returnType="void" visibility="public">
+          <Argument type="Mazo" name="mazo"/>
+        </Method>
       </Methods>
     </Class>
-    <Enum name="NumeroDeCarta" package="" visibility="public" xPosition="156.0" yPosition="310.0">
+    <Enum name="NumeroDeCarta" package="" visibility="public" xPosition="41.0" yPosition="290.0">
       <Literals>
         <Literal name="UNO(1)"/>
         <Literal name="DOS(2)"/>
@@ -51,7 +52,7 @@
         <Literal name="DOCE(12)"/>
       </Literals>
     </Enum>
-    <Enum name="PaloCarta" package="" visibility="public" xPosition="462.0" yPosition="347.0">
+    <Enum name="PaloCarta" package="" visibility="public" xPosition="234.0" yPosition="347.0">
       <Literals>
         <Literal name="ESPADA(&quot;espada&quot;)"/>
         <Literal name="BASTO(&quot;basto&quot;)"/>

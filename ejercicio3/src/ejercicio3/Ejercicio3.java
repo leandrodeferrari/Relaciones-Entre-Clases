@@ -1,6 +1,9 @@
 
 package ejercicio3;
 
+import ejercicio3.Entidades.Mazo;
+import ejercicio3.Servicios.ServicioMazo;
+
 
 public class Ejercicio3 {
 
@@ -25,7 +28,19 @@ public class Ejercicio3 {
         // si no ha salido ninguna indicárselo al usuario.
         // f) mostrarBaraja(): muestra todas las cartas hasta el final. Es decir, 
         // si se saca una carta y luego se llama al método, este no mostrara esa primera carta.
-            
+        
+        ServicioMazo servicio = new ServicioMazo();
+        Mazo mazoJuego = servicio.llenarBaraja();
+        servicio.mostrarBaraja(mazoJuego);
+        servicio.mostrarCartasDelMonton(mazoJuego);
+        servicio.barajar(mazoJuego);
+        servicio.mostrarBaraja(mazoJuego);
+        servicio.darCartas(mazoJuego);
+        servicio.cartasDisponibles(mazoJuego);
+        servicio.mostrarCartasDelMonton(mazoJuego);
+        
     }  
 
+ 
+    
 }

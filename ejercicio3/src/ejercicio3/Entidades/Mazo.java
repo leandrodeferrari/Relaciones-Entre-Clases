@@ -6,13 +6,15 @@ import java.util.HashSet;
 
 public class Mazo {
 
-    HashSet<Carta> barajaDeCartas;
+    private HashSet<Carta> barajaDeCartas;
+    private HashSet<Carta> cartasDelMonton;
 
     public Mazo() {
     }
 
-    public Mazo(HashSet<Carta> barajaDeCartas) {
+    public Mazo(HashSet<Carta> barajaDeCartas, HashSet<Carta> cartasDelMonton) {
         this.barajaDeCartas = barajaDeCartas;
+        this.cartasDelMonton = cartasDelMonton;
     }
 
     public HashSet<Carta> getBarajaDeCartas() {
@@ -23,9 +25,17 @@ public class Mazo {
         this.barajaDeCartas = barajaDeCartas;
     }
 
+    public HashSet<Carta> getCartasDelMonton() {
+        return cartasDelMonton;
+    }
+
+    public void setCartasDelMonton(HashSet<Carta> cartasDelMonton) {
+        this.cartasDelMonton = cartasDelMonton;
+    }
+
     @Override
     public String toString() {
-        return "Mazo{" + "barajaDeCartas=" + barajaDeCartas + '}';
+        return "Mazo{" + "barajaDeCartas=" + barajaDeCartas + ", cartasDelMonton=" + cartasDelMonton + '}';
     }
     
 }
