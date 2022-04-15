@@ -15,7 +15,6 @@ public class ServicioMazo {
     HashSet<Carta> cartasDelMonton = cartasDelMonton = new HashSet();
 
     ;
-    
 
     public Mazo llenarBaraja() {
 
@@ -43,8 +42,8 @@ public class ServicioMazo {
         ArrayList<Carta> listaCartas = new ArrayList(mazo.getBarajaDeCartas());
         Collections.shuffle(listaCartas);
         HashSet<Carta> listaCartasDesordenadas = new HashSet(listaCartas);
-
         mazo.setBarajaDeCartas(listaCartasDesordenadas);
+        
         return mazo;
 
     }
@@ -85,52 +84,111 @@ public class ServicioMazo {
     }
 
     public HashSet<Carta> darCartas(Mazo mazo) {
-        
+
         HashSet<Carta> cartasAgarradas = new HashSet();
         int numeroDeCartas;
-        
+
         System.out.println("Ingrese el número de cartas que desea agarrar");
         numeroDeCartas = leer.nextInt();
-        
-        if(mazo.getBarajaDeCartas().size()<numeroDeCartas){
-            
+
+        if (mazo.getBarajaDeCartas().size() < numeroDeCartas) {
+
             System.out.println("Lo siento, no hay suficientes cartas para agarrar");
             cartasAgarradas = null;
-            
+
         } else {
-            
+
             for (int i = 0; i < numeroDeCartas; i++) {
-                
-                cartasAgarradas.add(siguienteCarta(mazo)); 
-                
+
+                cartasAgarradas.add(siguienteCarta(mazo));
+
             }
-            
+
         }
-        
+
         return cartasAgarradas;
-        
+
     }
 
-    public void mostrarCartasDelMonton(Mazo mazo){
-        
-        if(mazo.getCartasDelMonton()==null){
-            
+    public void mostrarCartasDelMonton(Mazo mazo) {
+
+        if (mazo.getCartasDelMonton() == null) {
+
             System.out.println("No han salido cartas");
-            
+
         } else {
-            
+
             System.out.println("Cartas del monton:");
             System.out.println(mazo.getCartasDelMonton());
-            
+
         }
-        
+
     }
 
-    public void mostrarBaraja(Mazo mazo){
-        
+    public void mostrarBaraja(Mazo mazo) {
+
         System.out.println("Cartas que quedan en la baraja:");
         System.out.println(mazo.getBarajaDeCartas());
-        
+
     }
-    
+
+    public void Menu() {
+
+        Mazo mazoJuego = llenarBaraja();
+        int opcion, cartasDisponibles;
+        HashSet<Carta> cartasAgarradas = new HashSet();
+        Carta cartaSiguiente = null;
+
+        do {
+
+            menuOpcionesTexto();
+            opcion = leer.nextInt();
+
+            switch (opcion) {
+
+                case 1:
+                    mazoJuego = barajar(mazoJuego);
+                    break;
+                case 2:
+                  cartaSiguiente  = siguienteCarta(mazoJuego);
+                    break;
+                case 3:
+                    cartasDisponibles = cartasDisponibles(mazoJuego);
+                    break;
+                case 4:
+                    cartasAgarradas = darCartas(mazoJuego);
+                    break;
+                case 5:
+                    mostrarCartasDelMonton(mazoJuego);
+                    break;
+                case 6:
+                    mostrarBaraja(mazoJuego);
+                    break;
+                case 7:
+                    System.out.println("¡Hasta la próxima!");
+                    break;
+                default:
+                    System.out.println("Lo siento, ha ingresado una opción inválida");
+                    System.out.println("Vuelva a intentarlo");
+                    break;
+
+            }
+
+        } while (opcion != 7);
+
+    }
+
+    public void menuOpcionesTexto() {
+
+        System.out.println("¡Bienvenido! Elija una opción:");
+        System.out.println("1. Barajar");
+        System.out.println("2. Siguiente carta");
+        System.out.println("3. Cartas disponibles");
+        System.out.println("4. Dar cartas");
+        System.out.println("5. Mostrar cartas del montón");
+        System.out.println("6. Mostrar baraja");
+        System.out.println("7. Salir");
+
+    }
+
 }

@@ -36,6 +36,8 @@
         <Method name="mostrarBaraja" returnType="void" visibility="public">
           <Argument type="Mazo" name="mazo"/>
         </Method>
+        <Method name="menu" returnType="void" visibility="public"/>
+        <Method name="menuOpcionesTexto" returnType="void" visibility="public"/>
       </Methods>
     </Class>
     <Enum name="NumeroDeCarta" package="" visibility="public" xPosition="41.0" yPosition="290.0">
@@ -62,6 +64,8 @@
     </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Carta" target="PaloCarta" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Tiene" source="Carta" target="NumeroDeCarta" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="Tiene" source="Mazo" target="Carta" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
   </ClassDiagramRelations>
 </ClassDiagram>

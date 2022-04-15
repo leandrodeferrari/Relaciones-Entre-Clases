@@ -30,14 +30,7 @@ public class Ejercicio3 {
         // si se saca una carta y luego se llama al método, este no mostrara esa primera carta.
         
         ServicioMazo servicio = new ServicioMazo();
-        Mazo mazoJuego = servicio.llenarBaraja();
-        servicio.mostrarBaraja(mazoJuego);
-        servicio.mostrarCartasDelMonton(mazoJuego);
-        servicio.barajar(mazoJuego);
-        servicio.mostrarBaraja(mazoJuego);
-        servicio.darCartas(mazoJuego);
-        servicio.cartasDisponibles(mazoJuego);
-        servicio.mostrarCartasDelMonton(mazoJuego);
+        servicio.Menu();
         
     }  
 
