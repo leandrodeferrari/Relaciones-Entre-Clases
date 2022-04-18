@@ -1,6 +1,4 @@
-
 package ejercicio1.Entidades;
-
 
 public class Perro {
 
@@ -8,6 +6,7 @@ public class Perro {
     private String raza;
     private int edad;
     private String tamanio;
+    private Persona tutor;
 
     public Perro() {
     }
@@ -17,6 +16,14 @@ public class Perro {
         this.raza = raza;
         this.edad = edad;
         this.tamanio = tamanio;
+    }
+
+    public Perro(String nombre, String raza, int edad, String tamanio, Persona tutor) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.edad = edad;
+        this.tamanio = tamanio;
+        this.tutor = tutor;
     }
 
     public String getNombre() {
@@ -51,9 +58,17 @@ public class Perro {
         this.tamanio = tamanio;
     }
 
+    public Persona getTutor() {
+        return tutor;
+    }
+
+    public void setTutor(Persona tutor) {
+        this.tutor = tutor;
+    }
+
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamanio=" + tamanio + '}';
+        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamanio=" + tamanio + ", tutor=" + tutor.toString() + '}';
     }
-    
+
 }

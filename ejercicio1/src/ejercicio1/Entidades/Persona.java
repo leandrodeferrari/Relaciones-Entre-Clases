@@ -1,6 +1,6 @@
-
 package ejercicio1.Entidades;
 
+import java.util.HashSet;
 
 public class Persona {
 
@@ -8,24 +8,27 @@ public class Persona {
     private String apellido;
     private int edad;
     private long documentoDeIdentidad;
-    private Perro perro;
+    private HashSet<Perro> perros;
 
     public Persona() {
+        perros = new HashSet();
     }
 
     public Persona(String nombre, String apellido, int edad, long documentoDeIdentidad) {
+        perros = new HashSet();
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.documentoDeIdentidad = documentoDeIdentidad;
     }
-    
-    public Persona(String nombre, String apellido, int edad, long documentoDeIdentidad, Perro perro) {
+
+    public Persona(String nombre, String apellido, int edad, long documentoDeIdentidad, HashSet<Perro> perros) {
+        perros = new HashSet();
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.documentoDeIdentidad = documentoDeIdentidad;
-        this.perro = perro;
+        this.perros = perros;
     }
 
     public String getNombre() {
@@ -60,17 +63,17 @@ public class Persona {
         this.documentoDeIdentidad = documentoDeIdentidad;
     }
 
-    public Perro getPerro() {
-        return perro;
+    public HashSet<Perro> getPerros() {
+        return perros;
     }
 
-    public void setPerro(Perro perro) {
-        this.perro = perro;
+    public void setPerro(HashSet<Perro> perros) {
+        this.perros = perros;
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", documentoDeIdentidad=" + documentoDeIdentidad + ", perro=" + perro + '}';
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", edad=" + edad + ", documentoDeIdentidad=" + documentoDeIdentidad + ", perros=" + perros.toString() + '}';
     }
-    
+
 }

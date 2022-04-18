@@ -1,8 +1,7 @@
 
 package ejercicio1;
 
-import ejercicio1.Entidades.Persona;
-import ejercicio1.Servicios.ServicioPersona;
+import ejercicio1.Servicios.ServicioAdopcion;
 
 public class Ejercicio1 {
 
@@ -17,16 +16,20 @@ public class Ejercicio1 {
         // Persona un Perro y por ultimo, mostrar desde la clase Persona, 
         // la información del Perro y de la Persona.
         
-        ServicioPersona servicio = new ServicioPersona();
+        // 1(Extra). Ahora se debe realizar unas mejoras al ejercicio de Perro 
+        // y Persona. Nuestro programa va a tener que contar con muchas personas 
+        // y muchos perros. El programa deberá preguntarle a cada persona, que perro 
+        // según su nombre, quiere adoptar. Dos personas no pueden adoptar al mismo 
+        // perro, si la persona eligió un perro que ya estaba adoptado, se le 
+        // debe informar a la persona.
+        // Una vez que la Persona elige el Perro se le asigna, al final deberemos 
+        // mostrar todas las personas con sus respectivos perros.
         
-        Persona persona1 = servicio.crearPersona();
-        Persona persona2 = servicio.crearPersona();
-        
-        persona1.setPerro(servicio.adoptarPerro());
-        persona2.setPerro(servicio.adoptarPerro());
-        
-        servicio.mostrarDatosDeLaPersona(persona1);
-        servicio.mostrarDatosDeLaPersona(persona2);
+
+        ServicioAdopcion servicio = new ServicioAdopcion();
+        servicio.listandoPerros();
+        servicio.listandoPersonas();
+        servicio.adoptarSegunListadoDePersonas();
         
     }
 

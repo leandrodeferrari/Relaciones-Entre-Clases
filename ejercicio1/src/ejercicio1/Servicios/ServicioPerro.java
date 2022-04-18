@@ -14,13 +14,13 @@ public class ServicioPerro {
         String nombrePerro, razaPerro, tamanioPerro;
         int edadPerro;
         
-        System.out.println("Ingrese el nombre de su perro");
+        System.out.println("Ingrese el nombre del perro");
         nombrePerro = leer.next();
-        System.out.println("Ingrese la raza de su perro");
+        System.out.println("Ingrese la raza del perro");
         razaPerro = leer.next();
-        System.out.println("Ingrese la edad de su perro");
+        System.out.println("Ingrese la edad del perro");
         edadPerro = leer.nextInt();
-        System.out.println("Ingrese el tamaño de su perro (CHICO/MEDIANO/GRANDE)");
+        System.out.println("Ingrese el tamaño del perro (CHICO/MEDIANO/GRANDE)");
         tamanioPerro = leer.next();
         
         Perro perroUsuario = new Perro(nombrePerro, razaPerro, edadPerro, tamanioPerro);

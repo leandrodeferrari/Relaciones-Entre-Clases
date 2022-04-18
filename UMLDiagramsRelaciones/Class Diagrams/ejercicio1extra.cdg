@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicio1extra">
+  <ClassDiagramComponents>
+    <Class name="Perro" package="" visibility="public" xPosition="104.0" yPosition="49.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="raza" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="tamanio" type="String" visibility="private"/>
+        <Field name="tutor" type="Persona" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPerro" returnType="Perro" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Persona" package="" visibility="public" xPosition="394.0" yPosition="49.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="apellido" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="documentoDeIdentidad" type="long" visibility="private"/>
+        <Field name="perros" type="HashSet&lt;Perro&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearPersona" returnType="Persona" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Adopcion" package="" visibility="public" xPosition="233.0" yPosition="321.0">
+      <Fields>
+        <Field name="listaDePerros" type="HashSet&lt;Perro&gt;" visibility="private"/>
+        <Field name="listaDePersonas" type="HashSet&lt;Persona&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="listandoPerros" returnType="HashSet&lt;Perro&gt;" visibility="public"/>
+        <Method name="listandoPersonas" returnType="HashSet&lt;Persona&gt;" visibility="public"/>
+        <Method name="adoptarSegunListadoDePersonas" returnType="void" visibility="public"/>
+        <Method name="quiereAdoptar" returnType="boolean" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="adoptar" returnType="void" visibility="public">
+          <Argument type="Persona" name="persona"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Adopcion" target="Perro" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+    <HasRelation name="Tiene" source="Persona" target="Perro" type="Aggregation" sourceCardinality="0..1" targetCardinality="0..*" collectionType="HashSet"/>
+    <HasRelation name="Tiene" source="Adopcion" target="Persona" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
