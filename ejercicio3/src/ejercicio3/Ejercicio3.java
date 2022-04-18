@@ -1,8 +1,8 @@
 
 package ejercicio3;
 
-import ejercicio3.Entidades.Mazo;
-import ejercicio3.Servicios.ServicioMazo;
+import ejercicio3.entidades.Mazo;
+import ejercicio3.servicios.ServicioMazo;
 
 
 public class Ejercicio3 {

@@ -1,4 +1,4 @@
-package ejercicio1.Entidades;
+package ejercicio1.entidades;
 
 import java.util.HashSet;
 

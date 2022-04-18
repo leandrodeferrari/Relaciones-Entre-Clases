@@ -1,5 +1,5 @@
 
-package ejercicio3.Entidades;
+package ejercicio3.entidades;
 
 import java.util.HashSet;
 

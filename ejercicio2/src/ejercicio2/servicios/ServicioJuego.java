@@ -1,8 +1,8 @@
-package ejercicio2.Servicios;
+package ejercicio2.servicios;
 
-import ejercicio2.Entidades.Juego;
-import ejercicio2.Entidades.Jugador;
-import ejercicio2.Entidades.RevolverDeAgua;
+import ejercicio2.entidades.Juego;
+import ejercicio2.entidades.Jugador;
+import ejercicio2.entidades.RevolverDeAgua;
 import java.util.ArrayList;
 import java.util.Scanner;
 

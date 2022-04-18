@@ -1,7 +1,7 @@
 
-package ejercicio2.Servicios;
+package ejercicio2.servicios;
 
-import ejercicio2.Entidades.RevolverDeAgua;
+import ejercicio2.entidades.RevolverDeAgua;
 
 
 public class ServicioRevolverDeAgua {

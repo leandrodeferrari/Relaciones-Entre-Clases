@@ -1,7 +1,7 @@
 
-package ejercicio1.Servicios;
+package ejercicio1.servicios;
 
-import ejercicio1.Entidades.Persona;
+import ejercicio1.entidades.Persona;
 import java.util.Scanner;
 
 

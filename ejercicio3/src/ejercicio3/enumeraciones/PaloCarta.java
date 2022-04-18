@@ -1,4 +1,4 @@
-package ejercicio3.Enumeraciones;
+package ejercicio3.enumeraciones;
 
 public enum PaloCarta {
     ESPADA("espada"),BASTO("basto"),ORO("oro"),COPA("copa");

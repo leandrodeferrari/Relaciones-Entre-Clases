@@ -1,5 +1,5 @@
 
-package ejercicio2.Entidades;
+package ejercicio2.entidades;
 
 
 public class Jugador {

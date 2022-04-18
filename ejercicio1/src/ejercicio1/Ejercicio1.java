@@ -1,7 +1,7 @@
 
 package ejercicio1;
 
-import ejercicio1.Servicios.ServicioAdopcion;
+import ejercicio1.servicios.ServicioAdopcion;
 
 public class Ejercicio1 {
 

@@ -1,7 +1,7 @@
-package ejercicio3.Entidades;
+package ejercicio3.entidades;
 
-import ejercicio3.Enumeraciones.NumeroDeCarta;
-import ejercicio3.Enumeraciones.PaloCarta;
+import ejercicio3.enumeraciones.NumeroDeCarta;
+import ejercicio3.enumeraciones.PaloCarta;
 import java.util.Objects;
 
 public class Carta {

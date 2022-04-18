@@ -1,7 +1,7 @@
-package ejercicio3.Servicios;
+package ejercicio3.servicios;
 
-import ejercicio3.Entidades.Carta;
-import ejercicio3.Entidades.Mazo;
+import ejercicio3.entidades.Carta;
+import ejercicio3.entidades.Mazo;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;

@@ -2,7 +2,7 @@
 
 package ejercicio2;
 
-import ejercicio2.Servicios.ServicioJuego;
+import ejercicio2.servicios.ServicioJuego;
 
 public class Ejercicio2 {
 
