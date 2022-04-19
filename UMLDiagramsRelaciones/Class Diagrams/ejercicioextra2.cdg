@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicioextra2">
+  <ClassDiagramComponents>
+    <Class name="Cine" package="" visibility="public" xPosition="173.0" yPosition="79.0">
+      <Fields>
+        <Field name="peliculaReproduciendo" type="Pelicula" visibility="private"/>
+        <Field name="salaConEspectadores" type="Sala" visibility="private"/>
+        <Field name="precioDeEntrada" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Espectador" package="" visibility="public" xPosition="48.0" yPosition="275.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="edad" type="int" visibility="private"/>
+        <Field name="dineroDisponible" type="double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Sala" package="" visibility="public" xPosition="479.0" yPosition="79.0">
+      <Fields>
+        <Field name="sala" type="Sala" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearSala" returnType="Sala" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="" visibility="public" xPosition="305.0" yPosition="275.0">
+      <Fields>
+        <Field name="titulo" type="String" visibility="private"/>
+        <Field name="duracion" type="double" visibility="private"/>
+        <Field name="edadMinima" type="int" visibility="private"/>
+        <Field name="director" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Cine" target="Sala" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Tiene" source="Sala" target="Sala" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Tiene" source="Cine" target="Espectador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="Tiene" source="Cine" target="Pelicula" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
