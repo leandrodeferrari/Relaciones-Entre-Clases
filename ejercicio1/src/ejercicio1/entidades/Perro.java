@@ -68,7 +68,8 @@ public class Perro {
 
     @Override
     public String toString() {
-        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamanio=" + tamanio + ", tutor=" + tutor.toString() + '}';
+        String nombreTutor = tutor.getNombre();
+        return "Perro{" + "nombre=" + nombre + ", raza=" + raza + ", edad=" + edad + ", tamanio=" + tamanio + ", tutor=" + nombreTutor + '}';
     }
 
 }

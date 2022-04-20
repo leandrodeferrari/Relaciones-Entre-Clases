@@ -30,6 +30,7 @@ public class Ejercicio1 {
         servicio.listandoPerros();
         servicio.listandoPersonas();
         servicio.adoptarSegunListadoDePersonas();
+        servicio.mostrarPersonasConSusPerros();
         
     }
 

@@ -87,9 +87,16 @@ public class ServicioAdopcion {
         String nombrePerro;
         boolean bandera = false;
 
-//        System.out.println("Listado de perros en adopción:");
-//        System.out.println(listaDePerros.toString());
-//        System.out.println("");
+        System.out.println("Listado de perros en adopción:");
+        
+        for (Perro listaDePerro : listaDePerros) {
+            
+            System.out.print(listaDePerro.getNombre() + " ");
+            
+        }
+
+        System.out.println("");
+
         System.out.println("Ingrese el nombre del perro que desea adoptar");
         nombrePerro = leer.next();
 
@@ -101,8 +108,7 @@ public class ServicioAdopcion {
                 perro.setTutor(persona);
                 persona.getPerros().add(perro);
                 bandera = true;
-// Bucle infinito de llamadas en el tostring
-//System.out.println(persona);
+
             }
 
         }
@@ -111,6 +117,16 @@ public class ServicioAdopcion {
 
             System.out.println("Lo siento, el perro que desea adoptar no existe "
                     + "en nuestra lista o ya tiene tutor");
+
+        }
+
+    }
+
+    public void mostrarPersonasConSusPerros() {
+
+        for (Persona persona : listaDePersonas) {
+
+            System.out.println(persona);
 
         }
 
