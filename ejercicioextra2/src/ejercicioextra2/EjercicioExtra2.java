@@ -1,6 +1,11 @@
 
 package ejercicioextra2;
 
+import ejercicioextra2.entidades.Pelicula;
+import ejercicioextra2.entidades.Sala;
+import ejercicioextra2.servicios.ServicioPelicula;
+import ejercicioextra2.servicios.ServicioSala;
+
 public class EjercicioExtra2 {
 
     public static void main(String[] args) {
@@ -35,8 +40,12 @@ public class EjercicioExtra2 {
         // letra y numero de cada asiento o solo las X y espacios vacíos.
         
         
-        
-        
+        ServicioSala sv = new ServicioSala();
+        Sala sala = sv.crearSalaSinEspectadores();
+        ServicioPelicula servicioPelicula = new ServicioPelicula();
+        Pelicula pelicula = servicioPelicula.crearPelicula();
+        sv.ingresarEspectadoresEnSala(pelicula, 0, sala);
+//        System.out.println(sc.estaLibreElAsiento("8 A X"));
         
     }
 

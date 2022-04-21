@@ -2,48 +2,73 @@
 
 <ClassDiagram name="ejercicioextra2">
   <ClassDiagramComponents>
-    <Class name="Cine" package="" visibility="public" xPosition="173.0" yPosition="79.0">
+    <Class name="Cine" package="" visibility="public" xPosition="1.0" yPosition="31.0">
       <Fields>
         <Field name="peliculaReproduciendo" type="Pelicula" visibility="private"/>
         <Field name="salaConEspectadores" type="Sala" visibility="private"/>
         <Field name="precioDeEntrada" type="double" visibility="private"/>
       </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="crearCine" returnType="Cine" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Espectador" package="" visibility="public" xPosition="48.0" yPosition="275.0">
+    <Class name="Espectador" package="" visibility="public" xPosition="394.0" yPosition="361.0">
       <Fields>
         <Field name="nombre" type="String" visibility="private"/>
         <Field name="edad" type="int" visibility="private"/>
         <Field name="dineroDisponible" type="double" visibility="private"/>
       </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="crearEspectador" returnType="Espectador" visibility="public"/>
+      </Methods>
     </Class>
-    <Class name="Sala" package="" visibility="public" xPosition="479.0" yPosition="79.0">
+    <Class name="Sala" package="" visibility="public" xPosition="223.0" yPosition="31.0">
       <Fields>
         <Field name="sala" type="Sala" visibility="private"/>
+        <Field name="listaDeEspectadores" type="ArrayList&lt;Espectador&gt;" visibility="private"/>
+        <Field name="CANTIDAD_MAXIMA_DE_ASIENTOS" type="int" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="asientosOcupados" type="int" visibility="private"/>
+        <Field name="asientosDesocupados" type="int" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
-        <Method name="crearSala" returnType="Sala" visibility="public"/>
+        <Method name="crearSalaSinEspectadores" returnType="void" visibility="public"/>
+        <Method name="ingresarEspectadoresEnSala" returnType="Sala" visibility="public"/>
+        <Method name="estaLibreElAsiento" returnType="boolean" visibility="public">
+          <Argument type="String" name="datosAsiento"/>
+        </Method>
+        <Method name="hayEspacioEnLaSala" returnType="boolean" visibility="public">
+          <Argument type="Sala" name="sala"/>
+        </Method>
+        <Method name="TieneEdadParaVerPelicula" returnType="boolean" visibility="public">
+          <Argument type="Espectador" name="espectador"/>
+          <Argument type="Pelicula" name="pelicula"/>
+        </Method>
+        <Method name="tieneDineroSuficienteParaEntrada" returnType="boolean" visibility="public">
+          <Argument type="double" name="precioEntrada"/>
+          <Argument type="double" name="dineroEspectador"/>
+        </Method>
       </Methods>
     </Class>
-    <Class name="Pelicula" package="" visibility="public" xPosition="305.0" yPosition="275.0">
+    <Class name="Pelicula" package="" visibility="public" xPosition="51.0" yPosition="342.0">
       <Fields>
         <Field name="titulo" type="String" visibility="private"/>
-        <Field name="duracion" type="double" visibility="private"/>
+        <Field name="duracionEnHoras" type="double" visibility="private"/>
         <Field name="edadMinima" type="int" visibility="private"/>
         <Field name="director" type="String" visibility="private"/>
       </Fields>
       <Constructors/>
-      <Methods/>
+      <Methods>
+        <Method name="crearPelicula" returnType="Pelicula" visibility="public"/>
+      </Methods>
     </Class>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <HasRelation name="Tiene" source="Cine" target="Sala" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="Tiene" source="Sala" target="Sala" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="Tiene" source="Cine" target="Espectador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+    <HasRelation name="Tiene" source="Sala" target="Espectador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
     <HasRelation name="Tiene" source="Cine" target="Pelicula" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
   </ClassDiagramRelations>
 </ClassDiagram>
