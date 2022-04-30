@@ -3,6 +3,7 @@ package ejercicioextra2.servicios;
 
 import ejercicioextra2.entidades.Cine;
 import ejercicioextra2.entidades.Pelicula;
+import ejercicioextra2.entidades.Sala;
 
 
 public class ServicioCine {
@@ -12,12 +13,13 @@ public class ServicioCine {
         ServicioPelicula ServicioPelicula = new ServicioPelicula();
         Pelicula peliculaCine = ServicioPelicula.crearPelicula();
         
-        double precioCine = Math.random()*500+1;
+        ServicioSala servicioSala = new ServicioSala();
+        Sala sala = servicioSala.crearSalaSinEspectadores();
         
-        // Sala
+        int precioCine = (int) (Math.random()*1000+1);
+        System.out.println("Precio de la entrada: " + precioCine);
         
-        
-        Cine cine = new Cine();
+        Cine cine = new Cine(peliculaCine, sala, precioCine);
         
         return cine;
         

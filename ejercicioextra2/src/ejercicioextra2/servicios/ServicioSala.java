@@ -13,6 +13,7 @@ public class ServicioSala {
 
     public Sala crearSalaSinEspectadores() {
 
+        listaEspectadores = new ArrayList();
         String[][] matrizSala = new String[8][6];
         int numeroAsiento = 1;
         char letraAsiento = 70;
@@ -93,38 +94,46 @@ public class ServicioSala {
 
                         if (estaLibreElAsiento(contenidoAsiento)) {
 
-                            nuevaSala[numeroAlAzarParaFilas][numeroAlAzarParaColumnas] = contenidoAsiento.substring(0, 4) + "X|";
+                            if ((numeroAlAzarParaColumnas + 1) == nuevaSala[numeroAlAzarParaFilas].length) {
+
+                                nuevaSala[numeroAlAzarParaFilas][numeroAlAzarParaColumnas] = contenidoAsiento.substring(0, 4) + "X";
+
+                            } else {
+
+                                nuevaSala[numeroAlAzarParaFilas][numeroAlAzarParaColumnas] = contenidoAsiento.substring(0, 4) + "X|";
+
+                            }
 
                         } else {
 
                             nuevaSala[numeroAlAzarParaFilas][numeroAlAzarParaColumnas] = contenidoAsiento;
-                            System.out.println("Lo siento, está ocupado el asiento");
+                            System.out.println("Lo siento, " + listaEspectadores.get(i).getNombre() + ", está ocupado el asiento");
 
                         }
 
                     } else {
 
-                        System.out.println("Lo siento, no tiene dinero suficiente para pagar entrada");
+                        System.out.println("Lo siento, " + listaEspectadores.get(i).getNombre() + ", no tiene dinero suficiente para pagar entrada");
 
                     }
 
                 } else {
 
-                    System.out.println("Lo siento, no tiene edad suficiente para ver esta película");
+                    System.out.println("Lo siento, " + listaEspectadores.get(i).getNombre() + ", no tiene edad suficiente para ver esta película");
 
                 }
 
             } else {
 
-                System.out.println("Lo siento, ya no quedan asientos disponibles");
+                System.out.println("Lo siento, " + listaEspectadores.get(i).getNombre() + ", ya no quedan asientos disponibles");
 
             }
 
         }
 
         sala.setSala(nuevaSala);
-        
-         for (int i = 0; i < nuevaSala.length; i++) {
+
+        for (int i = 0; i < nuevaSala.length; i++) {
 
             for (int j = 0; j < nuevaSala[i].length; j++) {
 
@@ -133,7 +142,9 @@ public class ServicioSala {
             }
             System.out.println("");
         }
-        
+
+        sala.setSala(nuevaSala);
+
         return sala;
 
     }

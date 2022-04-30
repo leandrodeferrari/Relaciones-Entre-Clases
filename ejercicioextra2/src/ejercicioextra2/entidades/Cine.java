@@ -1,6 +1,6 @@
-
 package ejercicioextra2.entidades;
 
+import java.util.Arrays;
 
 public class Cine {
 
@@ -45,5 +45,5 @@ public class Cine {
     public String toString() {
         return "Cine{" + "peliculaReproduciendo=" + peliculaReproduciendo + ", salaConEspectadores=" + salaConEspectadores + ", precioDeEntrada=" + precioDeEntrada + '}';
     }
-    
+
 }

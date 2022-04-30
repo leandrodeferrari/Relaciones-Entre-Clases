@@ -1,8 +1,7 @@
-
 package ejercicioextra2.entidades;
 
 import java.util.ArrayList;
-
+import java.util.Arrays;
 
 public class Sala {
 
@@ -10,11 +9,11 @@ public class Sala {
     private ArrayList<Espectador> listaDeEspectadores;
     private int asientosOcupados;
     private int asientosDesocupados;
-    public static final int CANTIDAD_MAXIMA_DE_ASIENTOS = 48;
+    public final int CANTIDAD_MAXIMA_DE_ASIENTOS = 48;
 
     public Sala() {
         this.asientosOcupados = 0;
-        this.asientosDesocupados = 48;
+        this.asientosDesocupados = CANTIDAD_MAXIMA_DE_ASIENTOS;
     }
 
     public Sala(String[][] sala, ArrayList<Espectador> listaDeEspectadores) {
@@ -30,7 +29,7 @@ public class Sala {
     public String[][] getSala() {
         return sala;
     }
-    
+
     public void setSala(String[][] sala) {
         this.sala = sala;
     }
@@ -59,9 +58,13 @@ public class Sala {
         this.asientosDesocupados = asientosDesocupados;
     }
 
+    public int getCANTIDAD_MAXIMA_DE_ASIENTOS() {
+        return CANTIDAD_MAXIMA_DE_ASIENTOS;
+    }
+
     @Override
     public String toString() {
-        return "Sala{" + "sala=" + sala + ", listaDeEspectadores=" + listaDeEspectadores + ", asientosOcupados=" + asientosOcupados + ", asientosDesocupados=" + asientosDesocupados + '}';
+        return "Sala{" + "sala=" + Arrays.toString(sala) + ", listaDeEspectadores=" + listaDeEspectadores + ", asientosOcupados=" + asientosOcupados + ", asientosDesocupados=" + asientosDesocupados + '}';
     }
-    
+
 }

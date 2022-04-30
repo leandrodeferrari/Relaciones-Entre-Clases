@@ -26,11 +26,11 @@
     </Class>
     <Class name="Sala" package="" visibility="public" xPosition="223.0" yPosition="31.0">
       <Fields>
-        <Field name="sala" type="Sala" visibility="private"/>
+        <Field name="sala" type="String[][]" visibility="private"/>
         <Field name="listaDeEspectadores" type="ArrayList&lt;Espectador&gt;" visibility="private"/>
-        <Field name="CANTIDAD_MAXIMA_DE_ASIENTOS" type="int" visibility="public" isStatic="true" isFinal="true"/>
         <Field name="asientosOcupados" type="int" visibility="private"/>
         <Field name="asientosDesocupados" type="int" visibility="private"/>
+        <Field name="CANTIDAD_MAXIMA_DE_ASIENTOS" type="int" visibility="private" isFinal="true"/>
       </Fields>
       <Constructors/>
       <Methods>
@@ -67,8 +67,7 @@
   </ClassDiagramComponents>
   <ClassDiagramRelations>
     <HasRelation name="Tiene" source="Cine" target="Sala" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="Tiene" source="Sala" target="Sala" type="Composition" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <HasRelation name="Tiene" source="Sala" target="Espectador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
     <HasRelation name="Tiene" source="Cine" target="Pelicula" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+    <HasRelation name="Tiene" source="Sala" target="Espectador" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
   </ClassDiagramRelations>
 </ClassDiagram>
