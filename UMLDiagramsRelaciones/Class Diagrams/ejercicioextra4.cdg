@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejercicioextra4">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="" visibility="public" xPosition="249.0" yPosition="232.0">
+      <Fields>
+        <Field name="nombreCompleto" type="String" visibility="private"/>
+        <Field name="documentoDeIdentidad" type="Integer" visibility="private"/>
+        <Field name="cantidadDeVotos" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearAlumno" returnType="Alumno" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Simulador" package="" visibility="public" xPosition="571.0" yPosition="160.0">
+      <Fields>
+        <Field name="listaDeAlumnos" type="HashSet&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearSimulacion" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Voto" package="" visibility="public" xPosition="18.0" yPosition="7.0">
+      <Fields>
+        <Field name="alumno" type="Alumno" visibility="private"/>
+        <Field name="listaDeAlumnosVotados" type="HashSet&lt;Alumno&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="crearInstanciaDeVoto" returnType="Voto" visibility="public">
+          <Argument type="Alumno" name="alumnoQueVota"/>
+          <Argument type="HashSet&lt;Alumno&gt;" name="listaDeAlumnosVotados"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Enum name="Dni" package="" visibility="public" xPosition="547.0" yPosition="318.0">
+      <Literals>
+        <Literal name="DNI1"/>
+        <Literal name="DNI2"/>
+        <Literal name="DNI3"/>
+        <Literal name="DNI4"/>
+        <Literal name="DNI5"/>
+        <Literal name="DNI6"/>
+        <Literal name="DNI7"/>
+        <Literal name="DNI8"/>
+        <Literal name="DNI9"/>
+        <Literal name="DNI10"/>
+      </Literals>
+    </Enum>
+    <Enum name="NomrbeDeAlumno" package="" visibility="public" xPosition="18.0" yPosition="249.0">
+      <Literals>
+        <Literal name="ALUMNO1"/>
+        <Literal name="ALUMNO2"/>
+        <Literal name="ALUMNO3"/>
+        <Literal name="ALUMNO4"/>
+        <Literal name="ALUMNO5"/>
+        <Literal name="ALUMNO6"/>
+        <Literal name="ALUMNO7"/>
+        <Literal name="ALUMNO8"/>
+        <Literal name="ALUMNO9"/>
+        <Literal name="ALUMNO10"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Usa" source="Simulador" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+    <HasRelation name="Usa" source="Alumno" target="Dni" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Usa" source="Voto" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+    <HasRelation name="Usa" source="Alumno" target="NomrbeDeAlumno" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
