@@ -22,8 +22,15 @@ public class ServicioSimulador {
 
         }
 
+        // poner alumno en alumno y setear en alumno que vota.
+        // y restarlo a la lista.
+        
         simulador.setListaDeAlumnos(listaDeAlumnos);
 
+        mostrarListaDeAlumnos(simulador);
+        
+        // proseguir con la simulacion del voto.
+        
         return simulador;
 
     }

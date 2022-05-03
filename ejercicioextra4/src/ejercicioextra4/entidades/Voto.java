@@ -23,8 +23,8 @@ public class Voto {
 
     public void setListaDeAlumnosVotados(HashSet<Alumno> listaDeAlumnosVotados) {
         this.listaDeAlumnosVotados = listaDeAlumnosVotados;
-    }
-
+    }  
+    
     public Alumno getAlumnoQueVota() {
         return alumnoQueVota;
     }

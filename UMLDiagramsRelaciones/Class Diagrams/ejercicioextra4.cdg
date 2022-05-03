@@ -2,7 +2,7 @@
 
 <ClassDiagram name="ejercicioextra4">
   <ClassDiagramComponents>
-    <Class name="Alumno" package="" visibility="public" xPosition="249.0" yPosition="232.0">
+    <Class name="Alumno" package="" visibility="public" xPosition="199.0" yPosition="235.0">
       <Fields>
         <Field name="nombreCompleto" type="String" visibility="private"/>
         <Field name="documentoDeIdentidad" type="Integer" visibility="private"/>
@@ -13,13 +13,16 @@
         <Method name="crearAlumno" returnType="Alumno" visibility="public"/>
       </Methods>
     </Class>
-    <Class name="Simulador" package="" visibility="public" xPosition="571.0" yPosition="160.0">
+    <Class name="Simulador" package="" visibility="public" xPosition="494.0" yPosition="201.0">
       <Fields>
         <Field name="listaDeAlumnos" type="HashSet&lt;Alumno&gt;" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods>
         <Method name="crearSimulacion" returnType="void" visibility="public"/>
+        <Method name="mostrarListaDeAlumnos" returnType="void" visibility="public">
+          <Argument type="Simulador" name="simulador"/>
+        </Method>
       </Methods>
     </Class>
     <Class name="Voto" package="" visibility="public" xPosition="18.0" yPosition="7.0">
@@ -33,9 +36,15 @@
           <Argument type="Alumno" name="alumnoQueVota"/>
           <Argument type="HashSet&lt;Alumno&gt;" name="listaDeAlumnosVotados"/>
         </Method>
+        <Method name="votar3Veces" returnType="void" visibility="public">
+          <Argument type="Voto" name="voto"/>
+        </Method>
+        <Method name="mostrarVotosQueRecibieronLosAlumnos" returnType="void" visibility="public">
+          <Argument type="HashSet&lt;Alumno&gt;" name="listaAlumnos"/>
+        </Method>
       </Methods>
     </Class>
-    <Enum name="Dni" package="" visibility="public" xPosition="547.0" yPosition="318.0">
+    <Enum name="Dni" package="" visibility="public" xPosition="494.0" yPosition="376.0">
       <Literals>
         <Literal name="DNI1"/>
         <Literal name="DNI2"/>
@@ -49,7 +58,7 @@
         <Literal name="DNI10"/>
       </Literals>
     </Enum>
-    <Enum name="NomrbeDeAlumno" package="" visibility="public" xPosition="18.0" yPosition="249.0">
+    <Enum name="NomrbeDeAlumno" package="" visibility="public" xPosition="7.0" yPosition="341.0">
       <Literals>
         <Literal name="ALUMNO1"/>
         <Literal name="ALUMNO2"/>
@@ -65,9 +74,9 @@
     </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <HasRelation name="Usa" source="Simulador" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
-    <HasRelation name="Usa" source="Alumno" target="Dni" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="Usa" source="Voto" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
+    <HasRelation name="Usa" source="Simulador" target="Alumno" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="HashSet"/>
     <HasRelation name="Usa" source="Alumno" target="NomrbeDeAlumno" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Usa" source="Alumno" target="Dni" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
   </ClassDiagramRelations>
 </ClassDiagram>

@@ -1,6 +1,9 @@
 
 package ejercicioextra4;
 
+import ejercicioextra4.entidades.Simulador;
+import ejercicioextra4.servicios.ServicioSimulador;
+
 public class EjercicioExtra4 {
 
     public static void main(String[] args) {
@@ -39,7 +42,8 @@ public class EjercicioExtra4 {
         // 5 facilitadores suplentes con los 5 segundos alumnos más votados. A continuación, mostrar 
         // los 5 facilitadores y los 5 facilitadores suplentes.
         
-        
+        ServicioSimulador servicio = new ServicioSimulador();
+        Simulador simulacion = servicio.crearSimulacion();
         
         
         
