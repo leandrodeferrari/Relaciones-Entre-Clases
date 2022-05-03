@@ -2,7 +2,9 @@ package ejercicioextra4.servicios;
 
 import ejercicioextra4.entidades.Alumno;
 import ejercicioextra4.entidades.Simulador;
+import ejercicioextra4.entidades.Voto;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class ServicioSimulador {
 
@@ -15,22 +17,30 @@ public class ServicioSimulador {
         Alumno alumno;
         ServicioAlumno servicioAlumno = new ServicioAlumno();
 
-        while (listaDeAlumnos.size() < 10) {
+        while (listaDeAlumnos.size() < 5) {
 
             alumno = servicioAlumno.crearAlumno();
             listaDeAlumnos.add(alumno);
 
         }
 
-        // poner alumno en alumno y setear en alumno que vota.
-        // y restarlo a la lista.
-        
         simulador.setListaDeAlumnos(listaDeAlumnos);
 
         mostrarListaDeAlumnos(simulador);
+
+        ServicioVoto servicioVoto = new ServicioVoto();
+
+        Iterator<Alumno> it = simulador.getListaDeAlumnos().iterator();
         
-        // proseguir con la simulacion del voto.
+        while(it.hasNext()){
+            
+            Voto voto = servicioVoto.crearInstanciaDeVoto(it.next(), simulador.getListaDeAlumnos());
+            servicioVoto.votar3Veces(voto);
+            
+        }
         
+        servicioVoto.mostrarVotosQueRecibieronLosAlumnos(simulador.getListaDeAlumnos());
+
         return simulador;
 
     }

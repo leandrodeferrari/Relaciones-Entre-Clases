@@ -42,7 +42,7 @@ public class ServicioVoto {
 
             for (Alumno alumno : voto.getListaDeAlumnosVotados()) {
 
-                if (alumno.getNombreCompleto().toString().equalsIgnoreCase(opcionVoto)) {
+                if (alumno.getNombreCompleto().toString().equalsIgnoreCase(opcionVoto) && !alumno.getNombreCompleto().toString().equalsIgnoreCase(voto.getAlumnoQueVota().getNombreCompleto().toString())) {
 
                     System.out.println("Has votado a " + alumno.getNombreCompleto());
                     alumno.setCantidadDeVotos(contadorVotos + 1);

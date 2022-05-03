@@ -45,9 +45,6 @@ public class EjercicioExtra4 {
         ServicioSimulador servicio = new ServicioSimulador();
         Simulador simulacion = servicio.crearSimulacion();
         
-        
-        
-        
     }
 
 }
