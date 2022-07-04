@@ -1,6 +1,4 @@
-
 package ejercicioextra2.entidades;
-
 
 public class Espectador {
 

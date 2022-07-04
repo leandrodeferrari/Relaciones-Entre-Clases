@@ -1,11 +1,8 @@
-
 package ejercicioextra2;
 
 import ejercicioextra2.entidades.Cine;
-import ejercicioextra2.entidades.Pelicula;
-import ejercicioextra2.servicios.ServicioCine;
-import ejercicioextra2.servicios.ServicioPelicula;
-import ejercicioextra2.servicios.ServicioSala;
+import ejercicioextra2.servicios.CineServicio;
+import ejercicioextra2.servicios.SalaServicio;
 
 public class EjercicioExtra2 {
 
@@ -40,9 +37,9 @@ public class EjercicioExtra2 {
         // Al final del programa deberemos mostrar la tabla, podemos mostrarla con la 
         // letra y numero de cada asiento o solo las X y espacios vacíos.
         
-        ServicioCine servicioCine = new ServicioCine();
+        CineServicio servicioCine = new CineServicio();
         Cine cine = servicioCine.crearCine();
-        ServicioSala servicioSala = new ServicioSala();
+        SalaServicio servicioSala = new SalaServicio();
         cine.setSalaConEspectadores(servicioSala.ingresarEspectadoresEnSala(cine.getPeliculaReproduciendo(), cine.getPrecioDeEntrada(), cine.getSalaConEspectadores()));
         
     }

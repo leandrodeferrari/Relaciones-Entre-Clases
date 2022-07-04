@@ -1,15 +1,12 @@
 package ejercicioextra2.servicios;
 
-import ejercicioextra2.entidades.Espectador;
-import ejercicioextra2.entidades.Pelicula;
-import ejercicioextra2.entidades.Sala;
-import java.util.ArrayList;
-import java.util.Scanner;
+import ejercicioextra2.entidades.*;
+import java.util.*;
 
-public class ServicioSala {
+public class SalaServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    ArrayList<Espectador> listaEspectadores;
+    private ArrayList<Espectador> listaEspectadores;
 
     public Sala crearSalaSinEspectadores() {
 
@@ -51,9 +48,6 @@ public class ServicioSala {
             System.out.println("");
         }
 
-//        String parteAsiento = matrizSala[0][0].substring(0, 4) + "X|";
-//        
-//        System.out.println("parteAsiento = " + parteAsiento);
         Sala sala = new Sala(matrizSala, listaEspectadores);
 
         return sala;
@@ -62,7 +56,7 @@ public class ServicioSala {
 
     public Sala ingresarEspectadoresEnSala(Pelicula pelicula, double precioEntrada, Sala sala) {
 
-        ServicioEspectador servicioEspectador = new ServicioEspectador();
+        EspectadorServicio servicioEspectador = new EspectadorServicio();
         listaEspectadores = new ArrayList();
         int cantidadEspectadores;
 

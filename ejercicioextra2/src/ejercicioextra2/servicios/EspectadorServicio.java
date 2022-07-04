@@ -1,11 +1,9 @@
-
 package ejercicioextra2.servicios;
 
 import ejercicioextra2.entidades.Espectador;
 import java.util.Scanner;
 
-
-public class ServicioEspectador {
+public class EspectadorServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     

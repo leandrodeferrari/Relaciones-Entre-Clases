@@ -1,19 +1,15 @@
-
 package ejercicioextra2.servicios;
 
-import ejercicioextra2.entidades.Cine;
-import ejercicioextra2.entidades.Pelicula;
-import ejercicioextra2.entidades.Sala;
+import ejercicioextra2.entidades.*;
 
-
-public class ServicioCine {
+public class CineServicio {
 
     public Cine crearCine(){
         
-        ServicioPelicula ServicioPelicula = new ServicioPelicula();
+        PeliculaServicio ServicioPelicula = new PeliculaServicio();
         Pelicula peliculaCine = ServicioPelicula.crearPelicula();
         
-        ServicioSala servicioSala = new ServicioSala();
+        SalaServicio servicioSala = new SalaServicio();
         Sala sala = servicioSala.crearSalaSinEspectadores();
         
         int precioCine = (int) (Math.random()*1000+1);

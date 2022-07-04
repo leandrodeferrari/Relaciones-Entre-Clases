@@ -1,7 +1,5 @@
 package ejercicioextra2.entidades;
 
-import java.util.Arrays;
-
 public class Cine {
 
     private Pelicula peliculaReproduciendo;
