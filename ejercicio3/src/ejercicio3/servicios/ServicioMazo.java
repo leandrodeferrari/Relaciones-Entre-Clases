@@ -1,20 +1,13 @@
 package ejercicio3.servicios;
 
-import ejercicio3.entidades.Carta;
-import ejercicio3.entidades.Mazo;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Scanner;
+import ejercicio3.entidades.*;
+import java.util.*;
 
 public class ServicioMazo {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    HashSet<Carta> baraja;
-    HashSet<Carta> cartasDelMonton = cartasDelMonton = new HashSet();
-
-    ;
+    private HashSet<Carta> baraja;
+    private HashSet<Carta> cartasDelMonton = cartasDelMonton = new HashSet();
 
     public Mazo llenarBaraja() {
 

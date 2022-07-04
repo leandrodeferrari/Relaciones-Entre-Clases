@@ -1,8 +1,6 @@
-
 package ejercicio3.entidades;
 
 import java.util.HashSet;
-
 
 public class Mazo {
 

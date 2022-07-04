@@ -1,9 +1,6 @@
-
 package ejercicio3;
 
-import ejercicio3.entidades.Mazo;
 import ejercicio3.servicios.ServicioMazo;
-
 
 public class Ejercicio3 {
 
@@ -32,8 +29,6 @@ public class Ejercicio3 {
         ServicioMazo servicio = new ServicioMazo();
         servicio.Menu();
         
-    }  
-
- 
+    }
     
 }
