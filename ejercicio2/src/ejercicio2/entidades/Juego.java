@@ -1,8 +1,6 @@
-
 package ejercicio2.entidades;
 
 import java.util.ArrayList;
-
 
 public class Juego {
 

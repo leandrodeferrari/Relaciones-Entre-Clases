@@ -1,8 +1,6 @@
-
-
 package ejercicio2;
 
-import ejercicio2.servicios.ServicioJuego;
+import ejercicio2.servicios.JuegoServicio;
 
 public class Ejercicio2 {
 
@@ -51,7 +49,7 @@ public class Ejercicio2 {
         // Al final del juego, se debe mostrar que jugador se mojó. Pensar la lógica necesaria para realizar
         // esto, usando los atributos de la clase Juego.
         
-        ServicioJuego servicio = new ServicioJuego();
+        JuegoServicio servicio = new JuegoServicio();
         
         servicio.jugar();
         

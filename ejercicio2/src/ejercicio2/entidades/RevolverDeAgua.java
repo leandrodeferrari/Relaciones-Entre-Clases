@@ -1,6 +1,4 @@
-
 package ejercicio2.entidades;
-
 
 public class RevolverDeAgua {
 

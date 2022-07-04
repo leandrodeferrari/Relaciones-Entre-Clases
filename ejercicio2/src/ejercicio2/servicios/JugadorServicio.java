@@ -1,13 +1,12 @@
 package ejercicio2.servicios;
 
-import ejercicio2.entidades.Jugador;
-import ejercicio2.entidades.RevolverDeAgua;
+import ejercicio2.entidades.*;
 import java.util.Scanner;
 
-public class ServicioJugador {
+public class JugadorServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
-    int idJugador = 0;
+    private int idJugador = 0;
     
     public Jugador crearJugador() {
 
@@ -33,7 +32,7 @@ public class ServicioJugador {
 
     public boolean disparo(RevolverDeAgua revolver, Jugador jugadorUsuario) {
 
-        ServicioRevolverDeAgua servicioRevolver = new ServicioRevolverDeAgua();
+        RevolverDeAguaServicio servicioRevolver = new RevolverDeAguaServicio();
 
         jugadorUsuario.setEstaMojado(servicioRevolver.mojar(revolver));
 

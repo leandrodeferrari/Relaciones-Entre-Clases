@@ -1,12 +1,9 @@
 package ejercicio2.servicios;
 
-import ejercicio2.entidades.Juego;
-import ejercicio2.entidades.Jugador;
-import ejercicio2.entidades.RevolverDeAgua;
-import java.util.ArrayList;
-import java.util.Scanner;
+import ejercicio2.entidades.*;
+import java.util.*;
 
-public class ServicioJuego {
+public class JuegoServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     int cantidadJugadores;
@@ -28,7 +25,7 @@ public class ServicioJuego {
 
     public ArrayList<Jugador> llenarJugadores() {
 
-        ServicioJugador servicioJugador = new ServicioJugador();
+        JugadorServicio servicioJugador = new JugadorServicio();
         listaJugadores = new ArrayList();
 
         for (int i = 0; i < cantidadJugadores; i++) {
@@ -57,7 +54,7 @@ public class ServicioJuego {
 
     public void ronda(Juego juego) {
 
-        ServicioJugador servicioJugador = new ServicioJugador();
+        JugadorServicio servicioJugador = new JugadorServicio();
         boolean bandera = false;
         int cantidadRondas = 0;
         int numeroJugador = 0;
@@ -99,7 +96,7 @@ public class ServicioJuego {
 
     public void jugar() {
 
-        ServicioRevolverDeAgua servicioRevolver = new ServicioRevolverDeAgua();
+        RevolverDeAguaServicio servicioRevolver = new RevolverDeAguaServicio();
 
         System.out.println("¡Comienza el juego!");
         System.out.println("");
