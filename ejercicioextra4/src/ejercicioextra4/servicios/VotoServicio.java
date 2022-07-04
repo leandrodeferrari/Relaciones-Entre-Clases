@@ -1,11 +1,9 @@
 package ejercicioextra4.servicios;
 
-import ejercicioextra4.entidades.Alumno;
-import ejercicioextra4.entidades.Voto;
-import java.util.HashSet;
-import java.util.Scanner;
+import ejercicioextra4.entidades.*;
+import java.util.*;
 
-public class ServicioVoto {
+public class VotoServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
 

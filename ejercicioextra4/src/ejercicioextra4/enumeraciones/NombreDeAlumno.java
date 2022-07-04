@@ -1,4 +1,3 @@
-
 package ejercicioextra4.enumeraciones;
 
 public enum NombreDeAlumno {

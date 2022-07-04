@@ -1,21 +1,18 @@
 package ejercicioextra4.servicios;
 
-import ejercicioextra4.entidades.Alumno;
-import ejercicioextra4.entidades.Simulador;
-import ejercicioextra4.entidades.Voto;
-import java.util.HashSet;
-import java.util.Iterator;
+import ejercicioextra4.entidades.*;
+import java.util.*;
 
-public class ServicioSimulador {
+public class SimuladorServicio {
 
-    HashSet<Alumno> listaDeAlumnos;
+    private HashSet<Alumno> listaDeAlumnos;
 
     public Simulador crearSimulacion() {
 
         Simulador simulador = new Simulador();
         listaDeAlumnos = new HashSet();
         Alumno alumno;
-        ServicioAlumno servicioAlumno = new ServicioAlumno();
+        AlumnoServicio servicioAlumno = new AlumnoServicio();
 
         while (listaDeAlumnos.size() < 5) {
 
@@ -28,7 +25,7 @@ public class ServicioSimulador {
 
         mostrarListaDeAlumnos(simulador);
 
-        ServicioVoto servicioVoto = new ServicioVoto();
+        VotoServicio servicioVoto = new VotoServicio();
 
         Iterator<Alumno> it = simulador.getListaDeAlumnos().iterator();
         

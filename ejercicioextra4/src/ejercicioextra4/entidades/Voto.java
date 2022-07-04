@@ -1,8 +1,6 @@
-
 package ejercicioextra4.entidades;
 
 import java.util.HashSet;
-
 
 public class Voto {
 

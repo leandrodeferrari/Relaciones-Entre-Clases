@@ -1,11 +1,10 @@
 package ejercicioextra4.servicios;
 
 import ejercicioextra4.entidades.Alumno;
-import ejercicioextra4.enumeraciones.Dni;
-import ejercicioextra4.enumeraciones.NombreDeAlumno;
+import ejercicioextra4.enumeraciones.*;
 import java.util.Scanner;
 
-public class ServicioAlumno {
+public class AlumnoServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
 

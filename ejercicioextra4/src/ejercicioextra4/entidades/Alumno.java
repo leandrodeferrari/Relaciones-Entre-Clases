@@ -1,7 +1,6 @@
 package ejercicioextra4.entidades;
 
-import ejercicioextra4.enumeraciones.Dni;
-import ejercicioextra4.enumeraciones.NombreDeAlumno;
+import ejercicioextra4.enumeraciones.*;
 import java.util.Objects;
 
 public class Alumno {
