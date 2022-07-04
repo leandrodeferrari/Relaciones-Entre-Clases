@@ -1,11 +1,9 @@
-
 package ejercicio1.servicios;
 
 import ejercicio1.entidades.Persona;
 import java.util.Scanner;
 
-
-public class ServicioPersona {
+public class PersonaServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     
@@ -29,17 +27,6 @@ public class ServicioPersona {
         return personaUsuario;
         
     }
-    
-//    public Perro adoptarPerro(){
-//        
-//        System.out.println("¡Felicidades, ya has adoptado un perrito!");
-//        System.out.println("Ahora, por favor, ingrese los datos de tu nuevo acompañante");
-//        ServicioPerro servicio = new ServicioPerro();
-//        Perro perroPersona = servicio.crearPerro();
-//        
-//        return perroPersona;
-//        
-//    }
     
     public void mostrarDatosDeLaPersona(Persona personaUsuario){
         

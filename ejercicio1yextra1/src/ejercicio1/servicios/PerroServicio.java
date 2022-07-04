@@ -1,11 +1,9 @@
-
 package ejercicio1.servicios;
 
 import ejercicio1.entidades.Perro;
 import java.util.Scanner;
 
-
-public class ServicioPerro {
+public class PerroServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     

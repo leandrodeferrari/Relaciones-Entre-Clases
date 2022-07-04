@@ -1,8 +1,6 @@
-
 package ejercicio1.entidades;
 
 import java.util.HashSet;
-
 
 public class Adopcion {
 

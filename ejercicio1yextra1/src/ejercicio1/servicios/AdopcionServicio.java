@@ -5,7 +5,7 @@ import ejercicio1.entidades.Persona;
 import java.util.HashSet;
 import java.util.Scanner;
 
-public class ServicioAdopcion {
+public class AdopcionServicio {
 
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     HashSet<Perro> listaDePerros;
@@ -14,7 +14,7 @@ public class ServicioAdopcion {
     public HashSet<Perro> listandoPerros() {
 
         listaDePerros = new HashSet();
-        ServicioPerro servicioPerro = new ServicioPerro();
+        PerroServicio servicioPerro = new PerroServicio();
         int cantidadDePerros;
 
         System.out.println("¿Cuántos perros desea agregar al listado?");
@@ -33,7 +33,7 @@ public class ServicioAdopcion {
     public HashSet<Persona> listandoPersonas() {
 
         listaDePersonas = new HashSet();
-        ServicioPersona servicioPersona = new ServicioPersona();
+        PersonaServicio servicioPersona = new PersonaServicio();
         int cantidadDePersonas;
 
         System.out.println("¿Cuántas personas desea agregar al listado?");

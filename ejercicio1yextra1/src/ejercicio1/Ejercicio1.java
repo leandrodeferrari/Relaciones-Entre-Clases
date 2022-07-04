@@ -1,7 +1,6 @@
-
 package ejercicio1;
 
-import ejercicio1.servicios.ServicioAdopcion;
+import ejercicio1.servicios.AdopcionServicio;
 
 public class Ejercicio1 {
 
@@ -26,7 +25,7 @@ public class Ejercicio1 {
         // mostrar todas las personas con sus respectivos perros.
         
 
-        ServicioAdopcion servicio = new ServicioAdopcion();
+        AdopcionServicio servicio = new AdopcionServicio();
         servicio.listandoPerros();
         servicio.listandoPersonas();
         servicio.adoptarSegunListadoDePersonas();
