@@ -1,11 +1,7 @@
-
 package ejercicioextra3;
 
 import ejercicioextra3.entidades.CuotaPoliza;
-import ejercicioextra3.entidades.Poliza;
 import ejercicioextra3.servicios.CuotaPolizaServicio;
-import ejercicioextra3.servicios.PolizaServicio;
-import java.util.Date;
 
 public class EjercicioExtra3 {
 
